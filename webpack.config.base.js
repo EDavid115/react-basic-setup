@@ -1,9 +1,11 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const webpack = require('webpack')
-const dotenv = require('dotenv')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 
 const libraryName = 'react-setup'
 
@@ -29,7 +31,7 @@ module.exports = (state) => {
       chunkFilename: `${libraryName}.[hash]${min}.js`,
       path: path.join(__dirname, 'dist'),
       // Configurar a necesidad
-      publicPath: 'dist/'
+      // publicPath: 'dist/'
     },
     plugins: [
       new CleanWebpackPlugin(),
@@ -40,6 +42,10 @@ module.exports = (state) => {
         patterns: [
           { from: path.resolve(__dirname, 'locales'), to: 'locales' }
         ]
+      }),
+      new ManifestPlugin(),
+      new ServiceWorkerWebpackPlugin({
+        entry: path.join(__dirname, 'src/sw.js'),
       }),
       new webpack.DefinePlugin(envKeys)
     ],
