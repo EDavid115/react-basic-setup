@@ -28,6 +28,7 @@ module.exports = (state) => {
       filename: `${libraryName}.[hash]${min}.js`,
       chunkFilename: `${libraryName}.[hash]${min}.js`,
       path: path.join(__dirname, 'dist'),
+      // Configurar a necesidad
       publicPath: 'dist/'
     },
     plugins: [
