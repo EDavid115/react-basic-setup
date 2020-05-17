@@ -19,4 +19,4 @@
 - <https://github.com/oliviertassinari/serviceworker-webpack-plugin/tree/master/docs>
 - <https://webpack.js.org/guides/>
 - <https://eslint.org/docs/user-guide/configuring>
-- https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
+- <https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle>
