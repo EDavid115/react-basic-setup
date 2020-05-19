@@ -20,3 +20,9 @@
 - <https://webpack.js.org/guides/>
 - <https://eslint.org/docs/user-guide/configuring>
 - <https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle>
+
+## Por agregar
+
+- Internacionalización - react-i18next <https://github.com/i18next/react-i18next>
+- State Management - Context (Hooks) (Testing)
+- Router - (react-router- v5.2) (aim v6) <https://reacttraining.com/react-router/web/guides/quick-start>
