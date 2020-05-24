@@ -57,5 +57,7 @@ module.exports = {
       "endOfLine": "auto",
       "jsxBracketSameLine": false
     }],
+    "no-param-reassign": ["error", {"props": false}],
+    "react/jsx-props-no-spreading": "off"
   },
 };

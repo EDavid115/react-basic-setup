@@ -60,9 +60,12 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "js-cookie": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "serviceworker-webpack-plugin": "^1.0.1",
     "styled-components": "^5.1.0"
   }

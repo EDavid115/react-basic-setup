@@ -1,37 +1,19 @@
 import React from 'react';
-import {
-  useCountState,
-  useCountDispatch,
-  actionTypes,
-} from './components/count-context';
-
-const CountDisplay = () => {
-  const { count, user } = useCountState();
-  return <div>{`The current count is ${count}, userName ${user}`}</div>;
-};
-
-const Counter = () => {
-  const dispatch = useCountDispatch();
-  return (
-    <button
-      onClick={() =>
-        dispatch({
-          type: actionTypes.SET_USER,
-          user: 'er',
-        })
-      }
-    >
-      Increment countd
-    </button>
-  );
-};
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { FetchProvider } from './context/FetchContext';
+import AppRoutes from './Routes';
 
 const App = () => (
-  <div className="container">
-    <h1>Hello World, React! {process.env.ENV}</h1>
-    <CountDisplay />
-    <Counter />
-  </div>
+  <Router>
+    <AuthProvider>
+      <FetchProvider>
+        <div className="container">
+          <AppRoutes />
+        </div>
+      </FetchProvider>
+    </AuthProvider>
+  </Router>
 );
 
 export default App;

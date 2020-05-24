@@ -27,8 +27,8 @@ module.exports = (state) => {
   return {
     entry: './src/index.js',
     output: {
-      filename: `${libraryName}.[hash]${min}.js`,
-      chunkFilename: `${libraryName}.[hash]${min}.js`,
+      filename: `${libraryName}.[name].[hash]${min}.js`,
+      chunkFilename: `${libraryName}.[name].[hash]${min}.js`,
       path: path.join(__dirname, 'dist'),
       // Configurar a necesidad
       // publicPath: 'dist/'

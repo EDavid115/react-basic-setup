@@ -8,6 +8,10 @@
 - CSS - SASS, Styled Components
 - Lint - ESlint - Prettier - Airbnb
 - SW - CRA SW Configuration
+- Router - (react-router- v5.2) (aim v6)
+- State Management - Context (Hooks)
+- Requests - Axios
+- Cookies - js-cookie
 - Soporte TypeScript (Por mejorar)
 
 ## Referencias
@@ -20,9 +24,10 @@
 - <https://webpack.js.org/guides/>
 - <https://eslint.org/docs/user-guide/configuring>
 - <https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle>
+- <https://reacttraining.com/react-router/web/guides/quick-start>
+- <https://reactsecurity.io/>
 
 ## Por agregar
 
 - Internacionalización - react-i18next <https://github.com/i18next/react-i18next>
-- State Management - Context (Hooks) (Testing)
-- Router - (react-router- v5.2) (aim v6) <https://reacttraining.com/react-router/web/guides/quick-start>
+- Graphql - Apollo

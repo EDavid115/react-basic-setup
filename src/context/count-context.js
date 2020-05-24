@@ -7,11 +7,9 @@ const CountDispatchContext = createContext();
 const actionTypes = {
   INCREMENT: 'INCREMENT',
   DECREMENT: 'DECREMENT',
-  SET_USER: 'SET_USER',
 };
 
 const countReducer = (state, action) => {
-  // console.log(state, action);
   switch (action.type) {
     case 'INCREMENT': {
       return {
@@ -23,12 +21,6 @@ const countReducer = (state, action) => {
         count: state.count - 1,
       };
     }
-    case 'SET_USER': {
-      return {
-        count: state.count + 1,
-        user: action.user,
-      };
-    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -38,7 +30,6 @@ const countReducer = (state, action) => {
 const CountProvider = ({ children }) => {
   const [state, dispatch] = useReducer(countReducer, {
     count: 0,
-    user: '',
   });
   return (
     <CountStateContext.Provider value={state}>
